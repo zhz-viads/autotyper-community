@@ -11,7 +11,7 @@
     "check": "node --check main.js && node --check preload.js && node --check worker.js && node --check renderer.js",
     "test": "node --test",
     "verify": "npm run check && npm test",
-    "package:win": "electron-packager . AutoTyperCommunity --platform=win32 --arch=x64 --out=dist --overwrite"
+    "package:win": "electron-packager . AutoTyperCommunity --platform=win32 --arch=x64 --out=dist --overwrite --ignore=\"^/(MEMORY\\.md|TASK_BRIEF\\.md|CHANGELOG\\.md|AUTHOR\\.md|test|dist)(/|$)\""
   },
   "dependencies": {
     "koffi": "^3.1.4"

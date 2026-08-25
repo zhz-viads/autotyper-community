@@ -14,6 +14,15 @@ test('private project state is ignored by the public repository', () => {
   }
 });
 
+test('Windows package command excludes local project state', () => {
+  const packageJson = JSON.parse(fs.readFileSync(path.join(projectRoot, 'package.json'), 'utf8'));
+  const command = packageJson.scripts['package:win'];
+  for (const privateFile of ['MEMORY', 'TASK_BRIEF', 'CHANGELOG', 'AUTHOR']) {
+    assert.match(command, new RegExp(privateFile), privateFile);
+  }
+  assert.match(command, /test\|dist/);
+});
+
 test('public runtime has no private V8 model modules', () => {
   const forbiddenPaths = [
     'electron/typer/model',
