@@ -1,7 +1,7 @@
 {
   "name": "autotyper-community",
   "version": "1.0.2",
-  "description": "Open-source fixed-interval Unicode text input for Windows",
+  "description": "Fixed-interval Unicode text input for Windows",
   "main": "main.js",
   "author": "zhz-viads",
   "license": "MIT",
