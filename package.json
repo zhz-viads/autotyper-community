@@ -1,0 +1,26 @@
+{
+  "name": "autotyper-community",
+  "version": "1.0.0",
+  "description": "A minimal open-source Unicode text injector for Windows",
+  "main": "main.js",
+  "author": "zhz-viads",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "start": "electron .",
+    "check": "node --check main.js && node --check preload.js && node --check worker.js && node --check renderer.js",
+    "test": "node --test",
+    "verify": "npm run check && npm test",
+    "package:win": "electron-packager . AutoTyperCommunity --platform=win32 --arch=x64 --out=dist --overwrite"
+  },
+  "dependencies": {
+    "koffi": "^3.1.4"
+  },
+  "devDependencies": {
+    "@electron/packager": "^18.3.5",
+    "electron": "^33.0.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

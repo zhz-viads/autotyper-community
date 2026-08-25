@@ -1,0 +1,27 @@
+node_modules/
+dist/
+release/
+out/
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Local project state is intentionally not public.
+MEMORY.md
+TASK_BRIEF.md
+CHANGELOG.md
+AUTHOR.md
+AGENTS.md
+CLAUDE.md
+
+# Never commit credentials or local runtime data.
+.env
+.env.*
+*.pem
+*.key
+*.pfx
+*.p12
+credentials.json
+typing-profile.json
