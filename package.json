@@ -1,6 +1,6 @@
 {
   "name": "autotyper-community",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A minimal open-source Unicode text injector for Windows",
   "main": "main.js",
   "author": "zhz-viads",

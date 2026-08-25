@@ -2,9 +2,9 @@
 
 AutoTyper Community is a small, open-source Windows text injector. It types text into the foreground window through the standard Win32 `SendInput` API and uses Unicode events so Chinese, emoji, and mixed-language text can be handled without depending on the active keyboard layout.
 
-This repository is the intentionally simplified community edition of AutoTyper. It is useful for accessibility, demonstrations, repetitive text entry, and learning how a desktop input tool is structured. It is not the complete AutoTyper V8 source tree.
+It is designed for accessibility, demonstrations, repetitive text entry, and learning how a Windows desktop input tool is structured.
 
-## Public feature set
+## Features
 
 - Fixed interval between Unicode code points
 - Configurable 3-30 second countdown
@@ -14,21 +14,12 @@ This repository is the intentionally simplified community edition of AutoTyper. 
 - Progress and status updates in the application window
 - Surrogate pairs are emitted atomically so emoji are not split across calls
 
-## Intentionally not included
-
-- Human-rhythm generation or statistical timing models
-- Typist profiles, warm-up, fatigue, burst, hesitation, or motor models
-- Deliberate typo generation and correction planning
-- Target-duration solving and calibration logic
-- AutoTyper V8 protected-release tooling or private test baselines
-
-Those components belong to the private AutoTyper V8 project and are not licensed by this repository.
-
 ## Requirements
 
 - Windows 10 or Windows 11, x64
-- Node.js 20 or newer
-- npm
+- Node.js 20 or newer and npm, only when running from source
+
+The packaged Portable and Full versions include their own runtime. People using either packaged version do not need to install Node.js or npm.
 
 ## Run from source
 
@@ -49,4 +40,4 @@ Enter text, choose a fixed interval and countdown, then click **Start typing**. 
 
 ## License
 
-The files in this public repository are licensed under the MIT License. The license does not apply to AutoTyper V8 private source code or algorithms that are absent from this repository.
+This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
